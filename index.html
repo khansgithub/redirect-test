@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="base-path" content="/redirect-test">
+  <title>URL Redirect Service</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>URL Redirect Service</h1>
+      <p>Lightweight link redirector hosted on GitHub Pages</p>
+    </header>
+
+    <div class="card">
+      <h2>&#128279; Active Redirects <span id="redirect-count" style="color:var(--text-muted);font-weight:400;font-size:0.9rem"></span></h2>
+      <table class="redirect-table">
+        <thead>
+          <tr>
+            <th>Path</th>
+            <th>Destination</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="redirects-body">
+          <tr>
+            <td colspan="3" style="text-align:center;color:var(--text-muted)">Loading&hellip;</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>&#9881;&#65039; How It Works</h2>
+      <div class="info-box">
+        <strong>Base URL:</strong> <code class="base-url"></code><br>
+        Append any configured path to the base URL to trigger a redirect.<br>
+        <br>
+        <strong>Example:</strong> <code class="base-url"></code><code>/google</code> &#8594; <code>https://www.google.com</code><br>
+        <br>
+        <strong>Adding redirects:</strong> Edit <code>redirects.json</code> in the repo to add, remove, or modify redirect mappings.<br>
+        <br>
+        <strong>Analytics:</strong> Set your GA4 Measurement ID in <code>redirects.json</code> under <code>settings.googleAnalyticsId</code> to track redirect usage.
+      </div>
+    </div>
+
+    <footer>
+      URL Redirect Service &middot; Powered by GitHub Pages
+    </footer>
+  </div>
+
+  <script src="assets/redirect.js"></script>
+  <script>
+    RedirectService.loadConfig(function (config) {
+      RedirectService.renderDashboard(config);
+    });
+  </script>
+</body>
+</html>

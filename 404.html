@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="base-path" content="/redirect-test">
+  <title>Redirecting&hellip;</title>
+  <link rel="stylesheet" href="/redirect-test/assets/style.css">
+</head>
+<body>
+  <div class="container" id="redirect-content">
+    <div class="redirect-notice">
+      <div class="spinner"></div>
+      <h2>Redirecting&hellip;</h2>
+      <p>Please wait</p>
+    </div>
+  </div>
+
+  <script src="/redirect-test/assets/redirect.js"></script>
+  <script>
+    RedirectService.loadConfig(function (config) {
+      RedirectService.performRedirect(config);
+    });
+  </script>
+</body>
+</html>

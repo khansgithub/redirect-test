@@ -1,0 +1,12 @@
+{
+  "redirects": {
+    "google": "https://www.google.com",
+    "github": "https://github.com",
+    "example": "https://example.com"
+  },
+  "settings": {
+    "defaultRedirect": "",
+    "redirectDelay": 0,
+    "googleAnalyticsId": "G-XXXXXXXXXX"
+  }
+}
